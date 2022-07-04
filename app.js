@@ -17,6 +17,15 @@ downBtn.addEventListener("click", () => {
 	changeSlides("down");
 });
 
+// Повесим событие на использование клавиатуры
+ document.addEventListener("keydown", event => {
+	if (event.key === "ArrowUp") {
+		changeSlides("up");
+	} else if (event.key === "ArrowDown") {
+		changeSlides("down");
+	}
+ });
+
 function changeSlides(direction) {
 	if (direction === "up") {
 		activeSlidesIndex++;
